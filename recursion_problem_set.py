@@ -28,3 +28,12 @@ personal_investment(10000,0.2,100,0,100)
 # the second row would have two, the third row would have 3 and so on.
 # Make a recursive function which calculates the TOTAL NUMBER OF BOXES for a pyramid of boxes n high.
 # For instance, a pyramid that is 3 high would have a total of 6 boxes.  A pyramid 4 high would have 10.
+def pyramid(start, n, count):
+    start += 1
+    count += start
+    if start < n:
+        pyramid(start,n,count)
+    else:
+        print(count)
+
+pyramid(0, 3, 0)
